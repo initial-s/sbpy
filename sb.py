@@ -4,9 +4,9 @@ import json, time, random
 
 client = LineClient()
 #client = LineClient(authToken='AuthToken')
-client.log("Auth Token : " + str(client.authToken))
+client.log("EnVOZATJYsAe9qDLxsjd.Vn3x60GkkbhMA+Th+FV6tq.TQZm5HE/k5lACCzcSshpItFNevZcqUw/zTdcq+obzOo=: " + str(client.authToken))
 channel = LineChannel(client)
-client.log("Channel Access Token : " + str(channel.channelAccessToken))
+client.log("b829a73bf9fe7cd9a819517a9d55a7099889ffe3cfc05edf89cfdbb3e1577839: " + str(channel.channelAccessToken))
 
 poll = LinePoll(client)
 cctv={
@@ -49,7 +49,7 @@ while True:
                     if msg.toType == 2:
                         may = client.getProfile().mid
                         if may in str(msg.contentMetadata) and 'MENTION' in str(msg.contentMetadata):
-                            pilih = ['yang tag sy semoga jomblo seumur hidup','ngapain tag tag woe, kangen?','ada apa ini? ko di tag?','duhh kena tag, dianya kesepian kali yah','gk usah tag, gift tikel aja']
+                            pilih = ['cie jones ngetag','ngapain tag tag woe, kangen?','ada apa ini? ko di tag?','duhh kena tag, dianya kesepian kali yah','gk usah tag, gift tikel aja']
                             rslt = random.choice(pilih)
                             client.sendText(msg.to, str(rslt))
                         else:
@@ -76,7 +76,7 @@ while True:
                                 client.sendText(receiver, "TestSpeed")
                                 elapsed_time = time.time() - start
                                 client.sendText(receiver, "%sdetik" % (elapsed_time))
-                            elif 'spic' in text.lower():
+                            elif 'stealpict' in text.lower():
                                 try:
                                     key = eval(msg.contentMetadata["MENTION"])
                                     u = key["MENTIONEES"][0]["M"]
@@ -85,7 +85,7 @@ while True:
                                     client.sendImageWithURL(receiver, 'http://dl.profile.line.naver.jp/'+a)
                                 except Exception as e:
                                     print(e)
-                            elif 'scover' in text.lower():
+                            elif 'steal cover' in text.lower():
                                 try:
                                     key = eval(msg.contentMetadata["MENTION"])
                                     u = key["MENTIONEES"][0]["M"]
